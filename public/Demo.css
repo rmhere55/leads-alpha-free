@@ -1,0 +1,117 @@
+body {
+  /* Added for centering the whole component */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.carousel-container {
+  /* This is now the viewport */
+  width: 90%;
+  max-width: 1200px; /* Good practice to set a max-width */
+  overflow-x: auto;  /* KEY CHANGE: Enables horizontal scrolling on this container */
+  position: relative; /* Needed for the buttons, but now we'll position them relative to the body/a parent wrapper */
+  
+  /* --- Scroll Behavior --- */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; [2, 5]
+
+  /* --- Hide Scrollbar (Optional but recommended) --- */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.carousel-wrapper {
+  /* This wrapper's only job is to hold the cards in a row */
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  
+  /* KEY CHANGE: We remove overflow from here */
+}
+
+.card {
+  /* This is the most important part for sizing */
+  /* Do NOT grow, do NOT shrink, and the base size is 1/4 of the container minus the gap */
+  flex: 0 0 calc(100% / 4 - 1rem);
+  
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  scroll-snap-align: start; [2, 5]
+  border: 1px solid #ddd;
+}
+
+/* --- Button Positioning (Adjusted) --- */
+/* We position buttons next to the container for a cleaner look */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.prev {
+  left: 5px;
+}
+
+.next {
+  right: 5px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+  .card {
+    /* Show 3 cards on smaller desktops/tablets */
+    flex: 0 0 calc(100% / 3 - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    /* Show 2 cards on tablets */
+    flex: 0 0 calc(100% / 2 - 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    /* Show 1 card on mobile */
+    flex: 0 0 100%;
+  }
+}
+
+
+
+
+
+/* 50 spacing
+3.87rem heading
+1.25 rem p
+basic plan price 
+1.75rem 
+basic price  green dot wala 
+0.875rem 
+basic price p 
+1 rem 
+pricing  2.875rem 
+btn 1 rem 
+tick icon 1 rem 
+still can't decide 1.75rem 
+ */

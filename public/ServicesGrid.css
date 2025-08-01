@@ -1,0 +1,152 @@
+
+
+.services-section {
+  padding: 30px 0px;
+  background-color: #fff;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+  /* margin-top: 46px; */
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1654px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: linear-gradient(180deg, #e5eeff 0%, #f3f7ff 100%);
+  border-radius: 30px;
+  padding: 40px;
+  width: calc(50% - 12px); /* 2 cards per row with 24px gap */
+  height: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-card.wide {
+  width: 100%;
+}
+
+.service-icons {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  background-color: #1e60db;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #ffffff;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-text h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #232825;
+  margin-bottom: 12px;
+}
+
+.service-text p {
+  font-size: 16px;
+  color: #444a46;
+  margin-top: 16px;
+  line-height: 28px;
+  letter-spacing: -0.3px;
+}
+
+
+/* ============================= */
+/*        Responsive CSS         */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .services-section {
+    padding: 60px 40px;
+  }
+
+  .service-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-text h3 {
+    font-size: 24px;
+  }
+
+  .service-text p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .icon-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 50px 20px;
+  }
+
+  .service-card {
+    padding: 30px;
+  }
+
+  .service-icons {
+    top: 20px;
+    right: 20px;
+  }
+
+  .service-text h3 {
+    font-size: 22px;
+  }
+
+  .service-text p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 20px;
+  }
+
+  .icon-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .service-text h3 {
+    font-size: 20px;
+  }
+
+  .service-text p {
+    font-size: 13.5px;
+    line-height: 22px;
+  }
+}

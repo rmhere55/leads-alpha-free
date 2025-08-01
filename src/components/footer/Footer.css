@@ -1,0 +1,266 @@
+/* Footer.css
+
+.footer {
+  background: #F5F5F5;
+
+  padding: 60px 40px 20px;
+  font-family: "Manrope", sans-serif;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1656px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  width: 178px;
+  min-height: 100px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.footer-brand {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.brand-logo h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #444;
+}
+
+.google-review {
+  background-color: #fdfbff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ece8ff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.google-review img {
+  height: 36px;
+}
+
+.google-review span {
+  font-size: 18px;
+  color: #f4b400;
+}
+
+.google-review p {
+  font-size: 13px;
+  margin: 0;
+  color: #333;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  border-top: 1px solid #eaeaea;
+  padding-top: 16px;
+} */
+
+
+
+/* Footer.css */
+
+.footer {
+  background: #f5f5f5;
+  padding: 60px 40px 20px;
+  font-family: "Manrope", sans-serif;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1656px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  width: 178px;
+  min-height: 100px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.footer-brand {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.brand-logo h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #444;
+}
+
+.google-review {
+  background-color: #fdfbff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ece8ff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.google-review img {
+  height: 36px;
+}
+
+.google-review span {
+  font-size: 18px;
+  color: #f4b400;
+}
+
+.google-review p {
+  font-size: 13px;
+  margin: 0;
+  color: #333;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  border-top: 1px solid #eaeaea;
+  padding-top: 16px;
+}
+
+/* ------------------ */
+/* Responsive Styling */
+/* ------------------ */
+
+/* Tablets and below */
+@media screen and (max-width: 992px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .footer-brand {
+    width: 100%;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 576px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .brand-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-logo h3 {
+    font-size: 18px;
+  }
+
+  .footer-column h4 {
+    font-size: 15px;
+  }
+
+  .footer-column li {
+    font-size: 13px;
+  }
+
+  .google-review span {
+    font-size: 16px;
+  }
+
+  .google-review p {
+    font-size: 12px;
+  }
+}

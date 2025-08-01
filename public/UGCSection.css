@@ -1,0 +1,214 @@
+
+/* UGCSection.css */
+.ugc-section {
+  background: #fffcf0;
+  padding: 80px 20px;
+  font-family
+: "Manrope", sans-serif;
+  text-align: center;
+}
+
+.ugc-heading {
+  font-size: 68px;
+  font-weight: 600;
+  letter-spacing: -3.5px;
+  line-height: 88px;
+  margin-bottom: 40px;
+}
+
+.ugc-heading .highlight {
+  color: #1e60db;
+}
+
+.ugc-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.ugc-btn {
+  background: #efefef;
+  border-radius: 200px;
+  padding: 12px 24px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+} 
+
+.ugc-btn.active,
+.ugc-btn:hover {
+  background: linear-gradient(180deg, #0c52d4 0%, #6094f4 100%);
+  color: white;
+}
+
+.ugc-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.ugc-carousel-container {
+  width: 1475px;
+  height: 554px , auto;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  margin: 0 auto; /* ✅ This centers the container horizontally */
+
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+.ugc-carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.ugc-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-width: 352px;
+  max-width: 352px;
+  height: 554px;
+  border: 1px solid #efeef0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.ugc-card:hover {
+  transform: translateY(-4px);
+}
+
+.ugc-card img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.ugc-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #333;
+}
+.ugc-video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or try 'contain' for full video visibility */
+  border-radius: 12px; /* optional rounded corners */
+  display: block;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: #ddd;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.rating {
+  margin-left: auto;
+  color: #f4b400;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1e60db33;
+  color: #1e60db;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.nav-btn:hover {
+  background: linear-gradient(180deg, #0c52d4 0%, #6094f4 100%);
+  color: white;
+}
+
+.nav-btn.left {
+  left: 131px;
+}
+
+.nav-btn.right {
+  right: 131px;
+}
+
+.ugc-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.ugc-modal video {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .ugc-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .ugc-carousel-container {
+    padding: 0 20px;
+  }
+
+  .ugc-card img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ugc-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+}

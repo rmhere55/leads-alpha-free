@@ -1,0 +1,288 @@
+/* .why-section {
+  width: 100%;
+  padding: 80px 130px;
+  background-color: #fff;
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+}
+
+.why-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.why-line {
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+}
+
+.why-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+
+
+
+.why-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;      
+  gap: 50px;                  
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1654px;
+  margin: 0 auto;
+}
+
+
+.why-title {
+  max-width: 728px;
+  flex: 0 0 728px; 
+}
+
+.why-title h2 {
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 88px;
+  letter-spacing: -3.5px;
+  text-transform: capitalize;
+  color: #232825;
+  margin: 0;
+}
+
+.highlight {
+  color: #1E60DB;
+  display: inline;
+}
+
+.why-description {
+  max-width: 712px;
+  
+  flex: 0 0 712px;
+
+}
+
+.why-description p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: -0.3px;
+  color: #444A46;
+  margin: 0;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .why-section {
+    padding: 60px 40px;
+  }
+
+  .why-title h2 {
+    font-size: 52px;
+    line-height: 72px;
+    letter-spacing: -2px;
+  }
+
+  .why-description p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .why-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-section {
+    padding: 50px 20px;
+  }
+
+  .why-line {
+    width: 30px;
+  }
+
+  .why-label {
+    font-size: 14px;
+  }
+
+  .why-title h2 {
+    font-size: 42px;
+    line-height: 56px;
+    letter-spacing: -1.5px;
+  }
+
+  .why-description p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-title h2 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .why-description p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+
+
+ */
+
+
+ .why-section {
+  width: 100%;
+  padding: 80px 130px;
+  background-color: #fff;
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+}
+
+/* 👇 Wrap grid inside fixed-width container */
+.why-container {
+  width: 1654px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 728px 712px; /* Fixed widths */
+  gap: 214px; /* 🧠 as per your spec */
+  align-items: start;
+  height: 176px; /* optional: if fixed height needed */
+}
+
+.why-description p {
+  font-size: clamp(18px, 1.1vw, 20px);
+}
+
+.why-header {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 1654px;
+
+
+  /* justify-content: center; */
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.why-line {
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+}
+
+.why-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+
+
+.why-title {
+  max-width: 728px;
+}
+
+.why-title h2 {
+  line-height: 76px; /* previously 88px */
+  margin-bottom: 8px; /* 🧠 tighter heading spacing */
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 88px;
+  letter-spacing: -3.5px;
+  text-transform: capitalize;
+  color: #232825;
+  margin: 0;
+}
+
+.highlight {
+  color: #1E60DB;
+  display: inline;
+}
+
+.why-title .highlight:last-of-type {
+  display: block;
+}
+
+.why-description {
+  max-width: 712px;
+}
+
+.why-description p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: -0.3px;
+  color: #444A46;
+  margin: 0;
+}
+
+/* ================== Responsive ================== */
+
+@media (max-width: 1024px) {
+  .why-section {
+    padding: 60px 40px;
+  }
+
+  .why-content {
+    grid-template-columns: 1fr;
+  }
+
+  .why-title h2 {
+    font-size: 52px;
+    line-height: 72px;
+  }
+
+  .why-description p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-section {
+    padding: 50px 20px;
+  }
+
+  .why-line {
+    width: 30px;
+  }
+
+  .why-label {
+    font-size: 14px;
+  }
+
+  .why-title h2 {
+    font-size: 42px;
+    line-height: 56px;
+  }
+
+  .why-description p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-title h2 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .why-description p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}

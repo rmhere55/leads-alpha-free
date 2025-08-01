@@ -1,0 +1,332 @@
+
+/* === Base Layout === */
+.pricing-container {
+  width: 100%;
+  height: 100%;
+  max-width: 1654px;
+  margin: 0 auto;
+  /* margin-top: 70px; */
+  padding: 40px 20px ;
+}
+
+.pricing-title {
+  width: 205px;
+  height: 78px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 68px;
+  line-height: 88px;
+  letter-spacing: -3.5px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000;
+  margin: 0 auto 40px;
+}
+
+.plans-wrapper {
+  width: 1654px;
+  height: 818px;
+  display: flex;
+  justify-content: center;
+  gap: 29px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* Wrap only if necessary */
+  box-sizing: border-box;
+}
+
+/* === Plan Cards === */
+.plan-card {
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.plan-inner {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+.basic-card ,.standard-card{
+  width: 537px;
+  height: 532px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.basic-inner ,.standard-inner{
+  width: 516px;
+  height: 325px;
+  background: #efeeea;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  box-sizing: border-box;
+}
+
+
+.professional-card {
+   
+opacity: 1;
+border-radius: 20px;
+transform: rotate(0deg);
+
+  width: 533px;
+  height: 607px;
+  background: #1e60db;
+  color: white;
+}
+
+.professional-inner {
+  width: 511px;
+  height: 326px;
+  background: #4e85eb;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+/* === Tags === */
+.plan-tag {
+  width: fit-content;
+  padding: 4px 12px;
+  background: #efefef;
+  border-radius: 16px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #000;
+    display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+/* ✅ Status Dot */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #36a379;
+  border-radius: 10000px;
+}
+.bonus-tag {
+  background: #d3e2ff;
+  color: #000;
+}
+
+/* === Headings and Text === */
+
+h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal; /* "Medium" corresponds to weight 500 */
+  font-size: 28px;
+  line-height: 39.2px;
+  letter-spacing: -0.3px;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+/* p {
+  font-size: 16px;
+  margin: 5px 0 15px;
+} */
+p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal; /* "Medium" maps to normal + weight 500 */
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  margin: 5px 0 15px;
+}
+
+
+/* === Feature List === */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+}
+
+.feature-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1e60db;
+}
+
+.professional-card .feature-list li::before {
+  color: white;
+}
+
+/* === Button === */
+
+
+.wallet-btn {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal; /* "Medium" is handled by weight */
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0;
+  vertical-align: middle;
+
+  width: 183.7px;
+  height: 60px;
+  border-radius: 50px;
+  background: #1e60db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  /* font-weight: 600; */
+  transition: background 0.3s ease;
+}
+
+.wallet-btn:hover {
+  background: #174cbc;
+}
+
+.wallet-btn-wh {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal; /* "Medium" is handled by weight */
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0;
+  vertical-align: middle;
+
+  width: 186.55px;
+  height: 60px;
+  border-radius: 50px;
+  background: #ffffff1a; /* white with 10% opacity */
+  backdrop-filter: blur(0px);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.wallet-btn-wh:hover {
+  background: #ffffff33; /* slightly more visible on hover */
+}
+
+/* 
+.wallet-btn {
+  width: 183.7px;
+  height: 60px;
+  border-radius: 50px;
+  background: #1e60db;
+  color: white;
+  font-weight: 600;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.wallet-btn:hover {
+  /* background: #174cbc; 
+  background: #1E60DB;
+
+} */
+
+/* === Still Can't Decide Card === */
+.undecided-card {
+  margin: 40px auto 0;
+  width: 533px;
+  height: 195px;
+  background: rgba(30, 96, 219, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  /* text-align: center; */
+}
+
+.undecided-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal; /* "Medium" corresponds to font-weight: 500 */
+  font-size: 28px;
+  line-height: 39.2px;
+  letter-spacing: -0.3px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.undecided-card p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  margin-bottom: 15px;
+}
+
+
+/* === Responsive === */
+@media screen and (max-width: 1024px) {
+  .plans-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 90%;
+  }
+
+  .professional-inner {
+    width: 90%;
+    height: auto;
+  }
+
+  .undecided-card {
+    width: 90%;
+  }
+
+  .pricing-title {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wallet-btn {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .feature-list li {
+    font-size: 14px;
+  }
+}

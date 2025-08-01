@@ -1,0 +1,175 @@
+
+.carousel-container {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 4%;
+}
+
+.reel-card {
+  position: relative;
+  width: 100%;
+  max-width: 368px;
+  height: 654.22px;
+  border-radius: 12px;
+  overflow: hidden;
+  
+  /* Add fade-in animation */
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+.reel-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px; /* You can set between 10px to 20px as per your requirement */
+  overflow-x: auto;
+}
+
+
+.reel-video {
+  width: 368px;
+  height: 654.219970703125px;
+  object-fit: cover;
+  /* padding: 10px; */
+  /* gap: -50%; */
+}
+
+/* .gradient-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  top: 0;
+  left: 0;
+  z-index: 1;
+} */
+
+.reel-info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 2;
+  color: white;
+}
+
+.reel-info .name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.reel-info .location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.reel-info img {
+  width: 18px;
+  height: 12px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* .play-pause-btn {
+  position: absolute;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+} */
+
+
+.play-pause-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 32px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.play-pause-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.gradient-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.reel-card:hover .gradient-overlay {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
+}
+.play-pause-btn {
+  transition: transform 0.2s ease;
+}
+.play-pause-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.reel-card {
+  position: relative;
+  width: 100%;
+  max-width: 368px;
+  height: 654.22px;
+  border-radius: 12px;
+  overflow: hidden;
+  gap: -50%;
+
+
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    padding: 10px;
+  }
+
+  .reel-card {
+    max-width: 90%;
+    height: 400px;
+  }
+
+  .reel-info .name,
+  .reel-info .location {
+    font-size: 12px;
+  }
+
+  .play-pause-btn {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
